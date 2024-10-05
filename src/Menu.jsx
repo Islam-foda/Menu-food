@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+// import React, { useState } from "react";
 
 export default function Menu({ menu }) {
   return (
@@ -21,3 +21,7 @@ export default function Menu({ menu }) {
     </div>
   );
 }
+
+Menu.propTypes = {
+  menu: Array,
+};

@@ -1,12 +1,24 @@
-import React from "react";
+// import React from "react";
 
-export default function Categories() {
+export default function Categories({ categories, filterItems }) {
   return (
     <div className="btn-container">
-      <button className="filter-btn">All</button>
-      <button className="filter-btn">Breakfast</button>
-      <button className="filter-btn">Lunch</button>
-      <button className="filter-btn">Snacks</button>
+      {categories.map((item, index) => {
+        return (
+          <button
+            onClick={() => filterItems(item)}
+            key={index}
+            className="filter-btn"
+          >
+            {item}
+          </button>
+        );
+      })}
     </div>
   );
 }
+
+Categories.propTypes = {
+  categories: String,
+  filterItems: function () {},
+};
