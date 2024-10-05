@@ -192,13 +192,15 @@ Menu
   gap: 1rem 2rem;
   max-width: 25rem;
 }
+
 .photo {
-  object-fit: cover;
   height: 200px;
   width: 100%;
   border: 0.25rem solid var(--clr-gold);
-  border-radius: var(--radius);
   display: block;
+  width:100%;
+  object-fit: cover;
+  border-radius: var(--radius);
 }
 .item-info header {
   display: flex;
